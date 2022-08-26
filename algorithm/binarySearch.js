@@ -22,8 +22,7 @@ RECURSIVE
 +++++++++++
 const binarysearch = (arr, target, low, high) => {
   if (low <= high) {
-    //let mid = Math.floor(low + high / 2);
-    let mid = low + Math.floor((high - low) / 2);
+    let mid = Math.floor((low + high) / 2);
     if (arr[mid] === target) return mid;
     if (arr[mid] > target) {
       return binarysearch(arr, target, low, mid - 1);
